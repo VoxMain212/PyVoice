@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PyVoice</title>
+  </head>
+  <body>
+    <header>
+      <script>
+        function closeApp() {
+			    window.electronAPI.closeApp()
+		    }
+		    function maximize() {
+			    window.electronAPI.maximize()
+		    }
+		    function minimize() {
+			    window.electronAPI.minimize()
+		    }
+      </script>
+      <div id="title-bar">
+        <div id="title-bar-text">
+          PyVoice
+        </div>
+        <div id="title-bar-btns">
+          <button onclick="minimize()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <path d="M2 6H10" stroke="white" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </button>
+          <button onclick="maximize()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <rect x="1" y="1" width="10" height="10" rx="1" stroke="white" stroke-width="2" fill="none" />
+            </svg>
+          </button>
+          <button onclick="closeApp()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <path d="M1 1L11 11M11 1L1 11" stroke="white" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

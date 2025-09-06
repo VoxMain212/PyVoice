@@ -1,0 +1,28 @@
+{
+  "name": "pyvoice",
+  "version": "1.0.0",
+  "description": "Приложение с Electron + Python",
+  "main": "electron/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder",
+    "dist:dir": "electron-builder --dir",
+    "dist:win": "electron-builder --win --x64",
+    "dev:vue": "cd pyvoice-gui && npm run dev",
+    "build:vue": "cd pyvoice-gui && npm run build",
+    "dev": "npm run build:vue && electron frontend/main.js",
+    "watch": "concurrently \"npm run build:vue -- --watch\" \"electron frontend/main.js\""
+  },
+  "keywords": [
+    "electron",
+    "python",
+    "desktop"
+  ],
+  "author": "VoxMain",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "electron": "^28.0.0",
+    "electron-builder": "^24.0.0"
+  }
+}

@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+@import url('./base.css');
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-primary);
+    overflow: hidden;
+    font-family: 'Inter', sans-serif;;
+}
+
+h1, h2 {
+    color: var(--text-primary)
+}
+
+.toolbar-btn {
+    height: 54px;
+    width: 54px;
+}
+
+#title-bar {
+    padding-left: 10px;
+    padding-right: 10px;
+    -webkit-app-region: drag;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 36px;
+    background-color: var(--bg-sidebar);
+}
+
+#title-bar-btns button {
+    -webkit-app-region: no-drag;
+    height: 20px;
+    width: 20px;
+    border: none;
+    outline: none;
+    background-color: var(--bg-sidebar);
+}
+
+#title-bar-text {
+    color: white;
+    font-weight: bolder;
+}
+
+
+
+#reg-form {
+    height: calc(100vh - 36px);
+}
+
+#reg-form form {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.stand-inp {
+    margin: 10px;
+    outline: none;
+    font-size: 18px;
+    padding: 6px;
+    border-width: 2px;
+    border-color: rgb(46, 46, 46);
+    border-style: solid;
+    color: white;
+    border-radius: 10px;
+    background-color: rgb(26, 26, 26);
+}
+
+.primary-btn {
+    padding: 10px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: rgb(83, 83, 255);
+}
