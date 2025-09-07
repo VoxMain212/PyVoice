@@ -28,11 +28,11 @@ export default {
 <main>
     <div id="reg-form" style="width: 50vw;">
         <form action="">
-            <h1 style="color:white">Вход</h1>
+            <h1>Вход</h1>
             <input type="text" placeholder="Ник" class="stand-inp">
             <input type="text" placeholder="Пароль" class="stand-inp">
-            <button class="primary-btn" @click="login">Войти</button>
-            <button class="primary-btn" @click="gotoLogin">Зарегистрироватся</button>
+            <button type="button" class="primary-btn" @click="login">Войти</button>
+            <button type="button" class="primary-btn" @click="gotoLogin">Зарегистрироватся</button>
         </form>
     </div>
     <div style="width: 50vw;user-select: none" class="brand-section">
@@ -51,7 +51,7 @@ export default {
     color: white;
     text-align: justify;
     flex: 1;
-    background: linear-gradient(135deg, #7289da, #5865f2);
+    background: linear-gradient(135deg, var(--accent), var(--accent-alt));
     display: flex;
     flex-direction: column;
     justify-content: center;

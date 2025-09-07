@@ -30,9 +30,10 @@ export default {
 			servers: []
 		}
 	},
-	watch(selected_component) {
-		this.currentComponent = comp_dict[selected_component]
-		console.log(selected_component)
+	watch: {
+		selected_component(newVal) {
+			this.currentComponent = this.comp_dict[newVal]
+		}
 	},
 	methods: {
 		getServers() {
@@ -57,8 +58,10 @@ export default {
 
 <template>
 	<div v-if="!registered">
-		<RegComponent v-if="register" @data-from-child="register = $event" />
-		<LoginComponent v-else @data-from-child="register = $event" @data-reg="registered=$event" />
+		<transition name="fade" mode="out-in">
+			<RegComponent v-if="register" @data-from-child="register = $event"/>
+			<LoginComponent v-else @data-from-child="register = $event" @data-reg="registered=$event" />
+		</transition>
 	</div>
 	<main id="main-screen" v-else>
 		<ToolBarComponent @data-from-child="currentComponent=$event" id="toolbar-comp"/>
@@ -82,5 +85,18 @@ export default {
 
 #main-space {
 	width: 90vw;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from {
+  opacity: 0;
+}
+
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

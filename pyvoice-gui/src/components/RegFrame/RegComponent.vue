@@ -51,10 +51,10 @@ export default {
             <input v-model="nickname" type="text" placeholder="Ник" class="stand-inp reg">
             <input v-model="password" type="text" placeholder="Пароль" class="stand-inp reg">
             <input v-model='confirm_password' type="text" placeholder="Подтвердите пароль" class="stand-inp reg">
-            <button class="primary-btn" @click="register">
+            <button type="button" class="primary-btn" @click="register">
                 Зарегистрироватся
             </button>
-            <button class="primary-btn" @click="gotoLogin">
+            <button type="button" class="primary-btn" @click="gotoLogin">
                 Есть аккаунт
             </button>
         </form>
@@ -68,7 +68,7 @@ export default {
     color: white;
     text-align: justify;
     flex: 1;
-    background: linear-gradient(135deg, #7289da, #5865f2);
+    background: linear-gradient(135deg, var(--accent), var(--accent-alt));
     display: flex;
     flex-direction: column;
     justify-content: center;
