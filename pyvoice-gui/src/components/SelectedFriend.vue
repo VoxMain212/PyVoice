@@ -26,5 +26,14 @@ export default {
 </template>
 
 <style>
+#friend-frame {
+    height: 100vh;
+    background-color: var(--bg-chat);
+}
 
+#friend-title {
+    display: flex;
+    flex-direction: row;
+    
+}
 </style>

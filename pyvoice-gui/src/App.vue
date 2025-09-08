@@ -84,7 +84,7 @@ export default {
 }
 
 #main-space {
-	width: 90vw;
+	width: 95vw;
 }
 
 .fade-enter-active,

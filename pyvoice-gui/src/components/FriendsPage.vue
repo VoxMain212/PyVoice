@@ -69,12 +69,15 @@ export default {
 
 <style>
 #friend-block {
+    overflow: hidden;
     display: flex;
     flex-direction: row;
 }
 
 #friend-list {
+    padding: 20px;
     min-width: 10vw;
+    overflow: hidden;
 }
 
 .friend-item {
@@ -83,12 +86,33 @@ export default {
     display: flex;
     flex-direction: row;
 }
+.friend-text {
+    margin-left: 20px;
+    font-size: var(--font-size-primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 .friend-ip {
     color: var(--text-secondary);
+    font-size: var(--font-size-secondary)
 }
 
 .friend-avatar {
-    border-radius: 25%;
+    width: 42px;
+    height: 42px;
+    overflow: hidden;
+    border-radius: 100%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--border);
+}
+
+#seleted-friend-frame {
+    max-width: 90vw;
+    min-width: 80vw;
+    height: 100vh;
 }
 </style>
