@@ -1,0 +1,344 @@
+/* Сброс */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Flex утилиты */
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+/* Текст */
+.text-bold {
+  font-weight: bold;
+}
+
+.text-white {
+  color: white;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+  font-size: var(--font-size-secondary);
+}
+
+/* Кнопки */
+.btn-reset {
+  border: none;
+  outline: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.btn {
+  padding: 10px 16px;
+  border-radius: var(--radius);
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  border: none;
+  font-family: 'Inter', sans-serif;
+}
+
+.btn-primary {
+  background-color: var(--accent);
+  color: var(--text-button);
+}
+
+.btn-secondary {
+  background-color: var(--bg-input);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+}
+
+/* Инпуты */
+.input {
+  padding: 12px;
+  border-radius: var(--radius);
+  background-color: var(--bg-input);
+  color: var(--text-input);
+  border: 1px solid transparent;
+  font-size: 16px;
+  transition: var(--transition);
+  width: 100%;
+  max-width: 300px;
+}
+
+.input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 5px var(--accent);
+}
+
+/* Бренд-секция */
+.brand-section {
+  padding: 2rem;
+  color: white;
+  text-align: center;
+  flex: 1;
+  background: linear-gradient(135deg, var(--accent), var(--accent-alt));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Тулбар */
+.toolbar-btn {
+  margin-top: 8px;
+  display: flex;
+  padding: 8px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-primary);
+  transition: var(--transition);
+  border-radius: var(--radius);
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+
+.toolbar-btn:hover {
+  background-color: var(--accent);
+  box-shadow: 0 0 4px var(--accent);
+}
+
+.toolbar-btn.active {
+  background-color: var(--hover-overlay);
+}
+
+/* Заголовки */
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+}
+
+/* Формы */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 2rem;
+  width: 100%;
+}
+
+.form-container .input {
+  margin: 8px 0;
+}
+
+.form-container .btn {
+  margin-top: 16px;
+  width: 100%;
+  max-width: 300px;
+}
+
+/* Аватары */
+.avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--accent);
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar-large {
+  width: 52px;
+  height: 52px;
+  font-size: 24px;
+}
+
+/* Сообщения */
+.message {
+  display: flex;
+  margin: 8px 0;
+  padding: 8px;
+  border-radius: var(--radius);
+}
+
+.message .mes-avatar {
+  margin-right: 12px;
+}
+
+.message .mes-text {
+  flex-grow: 1;
+}
+
+.message .mes-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+.message.self-mes {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.message.self-mes .mes-avatar {
+  margin-right: 0;
+  margin-left: 12px;
+}
+
+/* Чат-инпут */
+.mes-input-line {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  padding: 8px 12px;
+  border-radius: var(--radius);
+  background-color: var(--bg-input);
+  border: 2px solid var(--accent);
+  transition: var(--transition-long);
+}
+
+.mes-input-line.focused {
+  box-shadow: 0 0 8px var(--accent);
+}
+
+.mes-input-line textarea {
+  flex-grow: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--text-primary);
+  font-size: 16px;
+  resize: none;
+  max-height: 120px;
+  overflow-y: auto;
+}
+
+.mes-input-line button {
+  margin-left: 8px;
+  padding: 8px;
+  border-radius: 50%;
+  background-color: var(--accent);
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Сайдбары */
+.sidebar {
+  padding: 20px;
+  background-color: var(--bg-sidebar);
+  border-right: 1px solid var(--border);
+  overflow-y: auto;
+}
+
+.sidebar-right {
+  border-right: none;
+  border-left: 1px solid var(--border);
+}
+
+/* Элементы списков */
+.list-item {
+  margin: 8px 0;
+  padding: 8px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.list-item:hover {
+  background-color: var(--hover-overlay);
+}
+
+.server-item,
+.friend-item {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.server-item:hover,
+.friend-item:hover {
+  background-color: var(--hover-overlay);
+}
+
+.server-text,
+.friend-text {
+  margin-left: 12px;
+  font-size: var(--font-size-primary);
+}
+
+/* Заголовки блоков */
+.block-title {
+  padding: 10px;
+  font-size: 20px;
+  background-color: var(--bg-sidebar);
+  border-bottom: 1px solid var(--border);
+}
+
+/* Плавные переходы */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}

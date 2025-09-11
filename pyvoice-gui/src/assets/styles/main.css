@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+@import url('./base.css');
+@import url('./utils.css');
+
+body {
+  overflow: hidden;
+  background-color: var(--bg-primary);
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  height: 100%;
+}
+
+/* Title Bar */
+#title-bar {
+  padding: 0 10px;
+  -webkit-app-region: drag;
+  height: 36px;
+  background-color: var(--bg-sidebar);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#title-bar-btns button {
+  -webkit-app-region: no-drag;
+  width: 20px;
+  height: 20px;
+  background-color: var(--bg-sidebar);
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+#title-bar-text {
+  color: white;
+  font-weight: bolder;
+}
+
+/* Устаревшие классы — оставлены для обратной совместимости, но лучше заменить */
+.stand-inp {
+  padding: 6px;
+  border-radius: 10px;
+  background-color: var(--bg-input);
+  color: white;
+  outline: none;
+  border: none;
+  transition: var(--transition);
+  margin: 10px;
+  font-size: 18px;
+}
+
+.stand-inp:focus {
+  box-shadow: 0 0 5px var(--accent);
+}
+
+.primary-btn {
+  margin-top: 10px;
+  padding: 10px;
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 14px;
+  font-weight: bold;
+  background-color: var(--accent);
+  transition: var(--transition);
+}

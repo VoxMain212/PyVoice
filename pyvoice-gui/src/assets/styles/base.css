@@ -1,0 +1,21 @@
+:root {
+  --bg-primary: #1A1A1E;
+  --bg-sidebar: #24242C;
+  --bg-chat: #1E1E23;
+  --bg-input: #24242C;
+  --text-primary: #E6E6E6;
+  --text-secondary: #9A9A9A;
+  --text-input: #FFFFFF;
+  --text-button: #FFFFFF;
+  --accent: #B057FF;
+  --accent-alt: #00D1FF;
+  --error: #FF5C5C;
+  --success: #00E676;
+  --border: #303038;
+  --hover-overlay: #B057FF1A;
+  --radius: 8px;
+  --transition: all 0.2s ease;
+  --transition-long: all 0.8s ease-in-out;
+  --font-size-primary: 18px;
+  --font-size-secondary: calc(var(--font-size-primary) * 0.7);
+}
