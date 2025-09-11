@@ -33,10 +33,6 @@ export default {
             this.current_server=server
             console.log("Выбран сервер"+String(server))
         },
-        loadServerImg(server_name)
-        {
-
-        }
     }
 }
 </script>
@@ -54,9 +50,7 @@ export default {
             </div>
         </div>
     </div>
-    <div id="server-frame">
-        <SelectedServer :server="current_server" />
-    </div>
+    <SelectedServer v-if="current_server" :server="current_server" />
 </div>
 </template>
 
@@ -64,6 +58,7 @@ export default {
 #server-page {
     display: flex;
     flex-direction: row;
+    height: 100%;
 }
 
 #server-list {
@@ -71,7 +66,7 @@ export default {
     border-right-style: solid;
     border-right-width: 1px;
     border-right-color: var(--border);
-    height: 100vh;
+    height: 100%;
     overflow-x: hidden;
 }
 

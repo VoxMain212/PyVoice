@@ -23,7 +23,7 @@ class UserProfile:
 
 @dataclass
 class UserSettings:
-    pass
+    language: str
 
 
 def generate_key_from_password(password: str, salt: bytes) -> bytes:

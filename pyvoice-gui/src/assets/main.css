@@ -9,10 +9,23 @@
     color: var(--text-primary)
 }
 
+html {
+    height: 100vh;
+}
+
+#app {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
 body {
-    background-color: var(--bg-primary);
     overflow: hidden;
-    font-family: 'Inter', sans-serif;;
+    background-color: var(--bg-primary);
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 h1, h2 {
@@ -55,7 +68,7 @@ h1, h2 {
 
 
 #reg-form {
-    height: calc(100vh - 36px);
+    height: 100%;
 }
 
 #reg-form form {
@@ -92,4 +105,55 @@ h1, h2 {
     font-size: 14px;
     font-weight: bold;
     background-color: var(--accent);
+}
+
+.mes-inp {
+    height: auto;
+    padding: 20px;
+    background-color: var(--bg-chat);
+    backdrop-filter: blur(10px);
+    border-top-color: var(--border);
+    border-top-width: 1px;
+    border-top-style: solid;
+}
+
+.mes-input-line {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    padding: 2px;
+    border-radius: 10px;
+    background-color: var(--bg-input);
+    border-width: 2px;
+    border-color: var(--accent);
+    border-style: solid;
+    transition: all 0.8s ease-in-out;
+}
+
+.mes-input-line.focused {
+    box-shadow: 0px 0px 8px var(--accent);
+    transition: all 0.8s ease-in-out;
+}
+
+.mes-input-line textarea {
+    margin-left: 5px;
+    height: 100%;
+    flex-grow: 1;
+    background-color: #00000000;
+    outline: none;
+    border: none;
+}
+
+.mes-input-line button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0);
+    outline: none;
+    border: none;
 }

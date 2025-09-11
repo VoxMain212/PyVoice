@@ -45,9 +45,6 @@ export default {
                         <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
                     </svg>
                 </div>
-                <div>
-                    Друзья
-                </div>
             </div>
             <div id="toolbar-servers" class="toolbar-btn" @click="changeComponent('ServersPage')">
                 <div>
@@ -57,9 +54,6 @@ export default {
                         <rect x="9" y="9" width="6" height="12" rx="1"/>
                     </svg>
                 </div>
-                <div>
-                    Сервера
-                </div>
             </div>
             <div id="toolbar-profile" class="toolbar-btn" @click="changeComponent('ProfilePage')">
                 <div>
@@ -67,9 +61,6 @@ export default {
                         <circle cx="12" cy="8" r="4"/>
                         <path d="M6 20V18a6 6 0 0 1 12 0v2"/>
                     </svg>
-                </div>
-                <div>
-                    Профиль
                 </div>
             </div>
         </div>
@@ -84,7 +75,7 @@ export default {
     justify-content: start;
     align-items: center;
     background-color: var(--bg-sidebar);
-    height: 100vh;
+    height: 100%;
     border-right-color: var(--border);
     border-right-width: 1px;
     border-right-style: solid;
@@ -92,27 +83,24 @@ export default {
 
 .toolbar-btn {
     padding: auto;
-    margin-top: 1vh;
+    margin-top: 0.5vh;
     display: flex;
-    padding: 10px;
+    padding: 2px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     align-content: center;
     color: var(--text-primary);
-    
     transition: var(--transition);
 }
 
 .toolbar-btn:hover {
     background-color: var(--accent);
-    border-radius: var(--radius);
     box-shadow: 0px 0px 4px var(--accent);
     transition: var(--transition);
 }
 
 .toolbar-btn.active {
     background-color: var(--hover-overlay);
-    border-radius: 10%;
 }
 </style>

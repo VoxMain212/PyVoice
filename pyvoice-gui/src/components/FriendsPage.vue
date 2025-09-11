@@ -43,7 +43,6 @@ export default {
 </script>
 
 <template>
-<div>
     <div id="friend-block">
         <div id="friend-list">
             <div class="friend-item" v-for="friend in friends" @click="selectFriend(friend)">
@@ -64,12 +63,11 @@ export default {
             <SelectedFriend :friend="selected_friend" />
         </div>
     </div>
-</div>
 </template>
 
 <style>
 #friend-block {
-    overflow: hidden;
+    height: 100%;
     display: flex;
     flex-direction: row;
 }
@@ -78,6 +76,7 @@ export default {
     padding: 20px;
     min-width: 10vw;
     overflow: hidden;
+    flex-shrink: 0;
 }
 
 .friend-item {
@@ -111,8 +110,7 @@ export default {
 }
 
 #seleted-friend-frame {
-    max-width: 90vw;
-    min-width: 80vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
 }
 </style>

@@ -47,7 +47,6 @@ function createWindow() {
     })
     const index_path = path.join(__dirname, '..', 'pyvoice-gui', 'dist', 'index.html')
     win.loadURL(`file://${index_path}`)
-
     startPython()
 }
 

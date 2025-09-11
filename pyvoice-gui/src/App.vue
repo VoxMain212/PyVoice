@@ -73,18 +73,20 @@ export default {
 
 <style scoped>
 #main-screen {
+	width: 100%;
 	display: flex;
 	flex-direction: row;
-	height: 100%;
+	align-items: stretch;
 }
 
 #toolbar-comp {
-	width: 10vw;
-	max-width: 100px;
+	width: 5vw;
+	max-width: 50px;
+	flex-shrink: 0;
 }
 
 #main-space {
-	width: 95vw;
+	flex-grow: 1;
 }
 
 .fade-enter-active,
