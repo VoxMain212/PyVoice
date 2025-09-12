@@ -77,6 +77,7 @@ export default {
     min-width: 10vw;
     overflow: hidden;
     flex-shrink: 0;
+    border-right: 1px solid var(--border);
 }
 
 .friend-item {

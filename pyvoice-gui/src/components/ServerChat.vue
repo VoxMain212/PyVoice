@@ -106,11 +106,6 @@ export default {
 }
 
 
-
-.message {
-
-}
-
 .mes-date {
     font-size: small;
     color: var(--text-secondary);

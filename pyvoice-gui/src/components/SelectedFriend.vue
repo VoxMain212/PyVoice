@@ -18,7 +18,7 @@ export default {
             <div>
                 {{ friend.nickname }}
             </div>
-            <div>
+            <div style="color: var(--text-secondary)">
                 {{ friend.ip }}
             </div>
         </div>
@@ -61,11 +61,20 @@ export default {
     display: flex;
     flex-direction: column;
     height: 100%;
-    background-color: var(--bg-chat);
+    background-color: var(--bg-primary);
 }
 
 #friend-title {
+    background-color: var(--bg-sidebar);
     display: flex;
-    flex-direction: row;
+    justify-content: start;
+    align-content: center;
+    padding: 10px;
+    flex-direction: column;
+    border-bottom: 1px solid var(--border);
+}
+
+#friend-chat-frame {
+    background-color: var(--bg-chat);
 }
 </style>

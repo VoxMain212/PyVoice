@@ -15,15 +15,27 @@ class UserProfile:
     unique_code: str
     hash_mac: str
 
-    def __init__(self, nickname: str, unique_code: str, user_hash: str):
-        self.nickname = nickname
-        self.unique_code = unique_code
-        self.hash_mac = user_hash
+    # def __init__(self, nickname: str, unique_code: str, user_hash: str):
+    #     self.nickname = nickname
+    #     self.unique_code = unique_code
+    #     self.hash_mac = user_hash
+
+    def save(self):
+        pass
 
 
 @dataclass
 class UserSettings:
     language: str
+    selected_micro: int
+    selected_speaker: int
+    trigger_server_addr: str
+
+    def json(self):
+        return json.dumps(asdict(self))
+
+    def save(self):
+        pass
 
 
 def generate_key_from_password(password: str, salt: bytes) -> bytes:
@@ -69,14 +81,15 @@ def get_profile_info(nickname: str, password: str):
     try:
         dec_data = fernet.decrypt(enc_data)
         json_data = json.loads(dec_data)
-
-        return json_data
+        profile = UserProfile(**json_data)
+        return profile
     except:
         return None
     
-def load_user_settings(nickname=None):
+def load_user_settings(nickname=None) -> UserSettings | None:
     if not os.path.exists(f'{SETTINGS_PATH}\\{nickname}_settings'):
         return None
     with open(f'{SETTINGS_PATH}\\{nickname}_settings', 'r', encoding='utf-8') as f:
-        settings = json.load(f)
+        settings_json = json.load(f)
+    settings = UserSettings(**settings_json)
     return settings

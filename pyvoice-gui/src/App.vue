@@ -57,7 +57,7 @@ export default {
 </script>
 
 <template>
-	<div v-if="!registered">
+	<div v-if="!registered" id="reg-container">
 		<transition name="fade" mode="out-in">
 			<RegComponent v-if="register" @data-from-child="register = $event"/>
 			<LoginComponent v-else @data-from-child="register = $event" @data-reg="registered=$event" />
@@ -72,6 +72,10 @@ export default {
 </template>
 
 <style scoped>
+#reg-container {
+	width: 100%;
+}
+
 #main-screen {
 	width: 100%;
 	display: flex;
